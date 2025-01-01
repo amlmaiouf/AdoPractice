@@ -1,0 +1,16 @@
+﻿@page
+@model CreateModel
+
+<h2>Create New User</h2>
+
+<form method="post">
+    <div>
+        <label>Name:</label>
+        <input asp-for="User.Name" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="User.Email" />
+    </div>
+    <button type="submit">Save</button>
+</form>

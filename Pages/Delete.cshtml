@@ -1,0 +1,20 @@
+﻿@page
+@model AdoPractice.Pages.DeleteModel
+@{
+    ViewData["Title"] = "Delete User";
+}
+
+
+<h2>Delete User</h2>
+
+<p>Are you sure you want to delete this user?</p>
+
+<div>
+    <h4>@Model.User.Name</h4>
+    <p>@Model.User.Email</p>
+</div>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+</form>

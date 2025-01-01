@@ -1,0 +1,30 @@
+﻿
+@page
+@using AdoPractice.Data
+@using AdoPractice.models
+@inject UserDbContext DbContext
+
+<h1>Users</h1>
+<p>Total Users: @DbContext.Users.Count()</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in DbContext.Users.ToList())
+        {
+            <tr>
+                <td>@user.ID</td>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Create">Create New User</a>

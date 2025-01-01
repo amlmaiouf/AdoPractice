@@ -1,0 +1,19 @@
+﻿@page "{id:int}"
+@model UpdateModel
+@{
+    ViewData["Title"] = "Update User";
+}
+
+<h2>Update User</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" asp-for="User.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" asp-for="User.Email" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
